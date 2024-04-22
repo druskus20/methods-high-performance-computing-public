@@ -24,3 +24,27 @@ bandwidths_std = [
 print(bandwidths_avg)
 print(bandwidths_std)
 
+
+labels = ['1', '32', '64', '128']
+
+plt.figure(figsize=(5,5))
+plt.bar(labels, bandwidths_std, color='skyblue', edgecolor='black')
+
+plt.xlabel('Labels')
+plt.ylabel('Bandwidth (MB/s)')
+plt.title('Histogram of average bandwidths (std)')
+
+plt.show()
+
+
+# different color 
+plt.figure(figsize=(5,5))
+plt.bar(labels, bandwidths_avg, color='lightcoral', edgecolor='black')
+
+plt.xlabel('Labels')
+plt.ylabel('Bandwidth (MB/s)')
+plt.title('Histogram of average bandwidths (avg)')
+
+
+plt.show()
+
